@@ -4,7 +4,7 @@
 Overview
 --------
 
-This Prophesee System package contains the source files and scripts necessary to build the **Kria Generic** FPGA's project, named **kria_generic**. This projet targets the **Kria Plafeform** FPGA from **Xilinx**.
+This Prophesee System package contains the source files and scripts necessary to build the **Kria Generic** FPGA's project, named **kria_generic**. This projet targets the **Kria Plafeform: kv260** with FPGA **xck26** from **Xilinx**.
 
 This document provides instructions on:
 - Environment Requirements and Setup
@@ -75,7 +75,7 @@ This project has been tested and validated using the following configuration:
 ### Source the Xilinx Vivado Toolset
 Open a bash terminal and ensure you have sourced the Vivado 2022.2 Toolset, .i.e:
 ```
-$ ./opt/eda/xilinx/2022.2/Vivado/2022.2/settings64.sh
+$ /opt/eda/xilinx/2022.2/Vivado/2022.2/settings64.sh
 ```
 Then check the tool version as follows:
 ```
@@ -89,11 +89,11 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 ## Create the project using the TCL script
 
-To create the project, go into the root directory.
+To create the project, go into the **root** directory.
 Then run the following commands:
 
 ```
-$ vivado -source psee_generic_kria_generic_RC_0_1_0.tcl -tclargs --origin_dir "./psee_generic/" --project_name "./build/kria_generic/kria_generic"
+$ vivado -source psee_generic/kria_generic_RC_0_1_0.tcl -tclargs --origin_dir "./psee_generic/" --project_name "./build/kria_generic/kria_generic"
 ```
 
 ## Top Simulations
@@ -169,7 +169,7 @@ There is no test bench nor valid simulation for the moment for this IP.
 
 ### event_stream_smart_tracker_1_0 overall presentation
 
-The ESST regulate the back pressure coming from the ps_host_if. Various parameters are accessible through the GUI interface in the Block Design and change slightly the behavior of the IP. Function if the IP are:
+The ESST regulate the back pressure coming from the ps_host_if. Various parameters are accessible through the GUI interface in the Block Design and change slightly the behavior of the IP. Functions of the IP are:
   - Drop input events after a defined threshold.
   - Analysing the timestamp and raise flags if condition are not met.
   - Generate new TimeStamp event(s) such as TimeHigh if the IP detect a loss of them in the pipeline.
@@ -196,7 +196,7 @@ In the vivado GUI, select the simulation test case you want in the Project manag
 
 ### ps_host_if_2_0 overall presentation
 
-The PS Host Interface makes the interface between the intern pipeline of the PL to give to the DMA and thus PS the input (and processed) events. Function if the IP are:
+The PS Host Interface makes the interface between the intern pipeline of the PL to give to the DMA and thus PS the input (and processed) events. Functions of the IP are:
   - Making the clock interface between PL and PS DMA.
   - Pack the events into a different data vector width if necessary.
   - Manage the tlast with TIMEOUT capability if necessary.
