@@ -1,13 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN
--- Create Date:    29.08.2023
--- Design Name:    axi4s_tlast_checker
--- Module Name:    axi4s_tlast_checker.vhd
--- Target Devices: All compatible
--- Tool versions:  2022.2
--- Description:    AXI4 Lite control register value catcher. Only EVT2.1 compatible
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;
@@ -18,6 +14,7 @@ use     work.ccam_utils.all;
 
 ----------------------------
 -- AXI4 Stream TLAST checker
+-- AXI4 Lite control register value catcher. Only EVT2.1 compatible
 entity axi4s_tlast_checker is
   generic (
     DATA_WIDTH_G       : positive := 32;

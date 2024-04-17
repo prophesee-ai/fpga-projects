@@ -1,22 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
---
--- Create Date:    Feb. 14, 2017
--- Design Name:    ccam_evt_types_v2
--- Module Name:    ccam_evt_types_v2
--- Project Name:   stereo_demo
--- Target Devices: Kintex Ultrascale
--- Tool versions:  Xilinx Vivado 2015.4
--- Description:    Package for miscellaneous utilities.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

@@ -1,22 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
---
--- Create Date:    Jun. 27, 2019
--- Design Name:    clk_rst_bfm
--- Module Name:    clk_rst_bfm
--- Project Name:   psee_evk_mb_moorea
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2018.2
--- Description:    Clock and Reset BFM
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

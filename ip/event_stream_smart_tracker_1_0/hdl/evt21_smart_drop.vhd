@@ -1,17 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
---
--- Create Date:    Nov. 22 2023
--- Design Name:    evt21_smart_drop
--- Module Name:    evt21_smart_drop
--- Project Name:   psee_generic
--- Target Devices: Zynq US
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    EVT 2.1 event stream smart dropper, without back pressure
---                 propagation to previous AXI Stream interface.
---                 This module heritates from 2.0 smart dropped adding more options
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;
@@ -23,6 +15,7 @@ use work.ccam_evt_type_v2_1_pkg.all;
 
 ---------------------------------------------------------------
 -- EVT 2.1 smart event stream dropper
+-- Without back pressure propagation to previous AXI Stream interface.
 entity evt21_smart_drop is
   port (
     -- Clock and Reset

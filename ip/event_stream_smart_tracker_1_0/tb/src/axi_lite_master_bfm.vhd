@@ -1,23 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       ROBIN Ladislas (lrobin@prophesee.ai)
---
--- Create Date:    Aug. 7, 2023
--- Design Name:    axi_lite_master_bfm
--- Module Name:    axi_lite_master_bfm
--- Project Name:   axi_lite_master_bfm
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2.1
--- Description:    AXI Lite Master BFM
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

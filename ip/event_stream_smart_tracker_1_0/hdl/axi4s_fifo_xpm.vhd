@@ -1,15 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
---
--- Create Date:    May 10, 2019
--- Design Name:    axi4s_fifo_xpm
--- Module Name:    axi4s_fifo_xpm
--- Project Name:
--- Target Devices: Xilinx
--- Tool versions:  Vivado 2018.2
--- Description:    Xilinx AXI4-Stream Synchronous FIFO
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

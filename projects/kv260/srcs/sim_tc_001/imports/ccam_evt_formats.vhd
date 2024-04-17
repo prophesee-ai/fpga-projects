@@ -1,22 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
---
--- Create Date:    Sep. 28, 2018
--- Design Name:    ccam_evt_formats
--- Module Name:    ccam_evt_formats
--- Project Name:   
--- Target Devices: 
--- Tool versions:  
--- Description:    Package for global event type definitions.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

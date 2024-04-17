@@ -1,23 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
---
--- Create Date:    Mar 29, 2017
--- Design Name:    evt30_sequencer
--- Module Name:    evt30_sequencer
--- Project Name:   ccam2_tep
--- Target Devices: Kintex UltraScale
--- Tool versions:  Xilinx Vivado 2016.4
--- Description:    Sequences events so that they are only issued at
---                 the expected time.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

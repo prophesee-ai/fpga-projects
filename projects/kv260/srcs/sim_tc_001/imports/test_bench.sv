@@ -1,15 +1,7 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company:        Prophesee
-// Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
-//
-// Create Date:    Sept. 18, 2023
-// Design Name:    kv260_test_bench
-// Module Name:    
-// Project Name:   kv260
-// Target Devices: Zynq Ultrascale
-// Tool versions:  Vivado 2022.2
-// Description:    test bench to simulate top kv260
-//////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Prophesee S.A. - All Rights Reserved
+// Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+// You may not use this file except in compliance with these License T&C's.
+
 `timescale 1ns / 1ps
 `include "tb_local_params.sv"
 

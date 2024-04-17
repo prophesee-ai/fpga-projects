@@ -1,21 +1,7 @@
 -------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Benoit Michel (bmichel@prophesee.ai)
--- Create Date:    November 3, 2023
--- Module Name:    axis_tkeep_handler
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    AXI4-Stream tkeep handler IP: reorder incomplete data words.
---                 Incomplete words can only half words (32-bits in case of a
---                 64-bits data bus).
---                 It is possible to change the order of the half words (first
---                 word can be the MSB or the LSB) with the word_order bit in
---                 the config register.
---                 The handler can be bypassed, in that case the input stream
---                 is directly connected to the output stream (no buffering
---                 stage but word order can still be modified).
---                 Buffers can be emptied with the clear bit in the control
---                 register.
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -24,6 +10,13 @@ use ieee.numeric_std.all;
 
 ----------------------------
 -- AXI4-Stream TKEEP Handler
+-- Reorder incomplete data words.
+-- Incomplete words can only half words (32-bits in case of a 64-bits data bus).
+-- It is possible to change the order of the half words (first word can be the MSB
+-- or the LSB) with the word_order bit in the config register.
+-- The handler can be bypassed, in that case the input stream is directly connected
+-- to the output stream (no buffering stage but word order can still be modified).
+-- Buffers can be emptied with the clear bit in the control register.
 entity axis_tkeep_handler is
   generic (
     AXIL_ADDR_WIDTH_G  : positive := 32;

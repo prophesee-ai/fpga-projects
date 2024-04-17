@@ -1,15 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ny Onintsoa ANDRIAMANANJARA
--- Create Date:    Jul. 30, 2019
--- Module Name:    evt_record_generic
--- Target Devices: All compatible
--- Tool versions:  All compatible
--- Description:    Reads a reference events stream from a file and
---                 compares it with the stream on its AXI4-Stream
---                 input port.with a generic data width
---                 Ready line toggles with the READY_RATIO_G.
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;

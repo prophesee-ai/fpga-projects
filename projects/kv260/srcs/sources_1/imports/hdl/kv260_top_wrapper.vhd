@@ -1,12 +1,9 @@
---Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.2.1 (lin64) Build 3719031 Thu Dec  8 18:35:06 MST 2022
---Date        : Wed Apr 17 17:06:17 2024
---Host        : tars-system-u20 running 64-bit Ubuntu 20.04.6 LTS
---Command     : generate_target kv260_top_wrapper.bd
---Design      : kv260_top_wrapper
---Purpose     : IP block netlist
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;

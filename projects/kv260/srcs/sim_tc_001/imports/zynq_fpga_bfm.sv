@@ -1,19 +1,11 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company:        Prophesee
-// Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
-//
-// Create Date:    Sept. 26, 2023
-// Design Name:    zynq_fpga_bfm
-// Module Name:    
-// Project Name:   kv260
-// Target Devices: Zynq Ultrascale
-// Tool versions:  Vivado 2022.2
-// Description:    BFM for Zynq processing part: Take a file and apply to internal
-//                 AXIL bus to FPGA PL
-//////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Prophesee S.A. - All Rights Reserved
+// Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+// You may not use this file except in compliance with these License T&C's.
+
 `timescale 1ns / 1ps
 `include "tb_local_params.sv"
 
+// BFM for Zynq processing part: Take a file and apply to internal AXIL bus to FPGA PL
 module zynq_fpga_bfm #(
     parameter string FILE_PATH = "input.txt", string WHOIAM_G = "Zynq FPGA BFM") 
     (

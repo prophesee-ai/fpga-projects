@@ -1,17 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
---
--- Create Date:    Nov. 27, 2023
--- Design Name:    evt21_ts_checker
--- Module Name:    evt21_ts_checker
--- Project Name:   psee_generic
--- Target Devices: Zynq US
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    Tinestamp checker heritates from evt2.0 version (evt20_ts_checker)
--- Dependencies:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -20,7 +12,7 @@ library work;
 use work.ccam_utils_pkg.all;
 use work.ccam_evt_type_v2_1_pkg.all;
 
-
+-- Tinestamp checker
 entity evt21_ts_checker is
   generic (
     TIME_HIGH_PERIOD_US   : positive := 16

@@ -1,22 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
---
--- Create Date:    Feb. 8, 2016
--- Design Name:    ccam_utils
--- Module Name:    ccam_utils
--- Project Name:   stereo_demo
--- Target Devices: Kintex 7
--- Tool versions:  Xilinx Vivado 2015.4
--- Description:    Package for miscellaneous utilities.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;

@@ -1,13 +1,9 @@
-----------------------------------------------------------------------------------
--- Company        : Prophesee
--- Engineer       : Ny Onintsoa ANDRIAMANANJARA
--- Create Date    : 13.01.2020
--- Design Name    : mipi_csi_tx_packetheader
--- Module Name    : mipi_csi_tx_packetheader.vhd
--- Target Devices : Xilinx 7Series, Ultrascale+
--- Tool versions  : 2018.2
--- Description    : MIPI CSI-2 TX packet header
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;

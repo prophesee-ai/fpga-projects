@@ -1,17 +1,7 @@
 -------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Benoit Michel (bmichel@prophesee.ai)
--- Create Date:    January 31, 2024
--- Module Name:    ps_host_if
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    Zynq PS Host I/F / AXI4-Stream Packetizer
---                 Insert a tlast at regular intervals:
---                 - when packets have a defined length or
---                 - when time between packets reaches a defined value.
---                 Note: The axi4s_packet_timeout module has a combinatorial
---                 ready signal and therefore relies on the presence of a skid
---                 buffer in the axi4s_packetizer module.
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -22,7 +12,13 @@ library work;
 use work.ps_host_if_reg_bank_pkg.all;
 
 -------------------
--- Zynq PS Host I/F
+-- AXI4-Stream Packetizer
+-- Insert a tlast at regular intervals:
+-- - when packets have a defined length or
+-- - when time between packets reaches a defined value.
+-- Note: The axi4s_packet_timeout module has a combinatorial ready signal and
+-- therefore relies on the presence of a skid buffer in the axi4s_packetizer
+-- module.
 entity ps_host_if is
   generic (
     AXIL_ADDR_WIDTH_G  : positive := 32;

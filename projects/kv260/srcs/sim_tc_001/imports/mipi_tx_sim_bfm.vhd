@@ -1,23 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       ROBIN Ladislas (lrobin@prophesee.ai)
---
--- Create Date:    Sept. 20, 2023
--- Design Name:    mipi_tx_sim_bfm
--- Module Name:    mipi_tx_sim_bfm
--- Project Name:   mipi_tx_sim_bfm
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2.1
--- Description:    MIPI TX Top simulation BFM
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

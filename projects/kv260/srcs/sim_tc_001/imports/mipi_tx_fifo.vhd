@@ -1,15 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
---
--- Create Date:    Oct. 31, 2019
--- Design Name:    mipi_tx_fifo
--- Module Name:    mipi_tx_fifo
--- Project Name:   ccam4_single_sisley
--- Target Devices: Xilinx Spartan 7
--- Tool versions:  Vivado 2018.2
--- Description:    MIPI TX FIFO
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

@@ -1,21 +1,16 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
---
--- Create Date:    Dec. 11 2023
--- Design Name:    axi4s_pipeline_stage
--- Module Name:    axi4s_pipeline_stage
--- Project Name:   psee_generic
--- Target Devices: Zynq US
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    AXI4-Stream Pipeline Stage. Customable stages. First and Keep signals handle
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 -----------------------------
 -- AXI4-Stream Pipeline Stage
+-- Customizable stages. First and Keep signals handled.
 entity axi4s_pipeline_stage is
   generic (
     PIPELINE_STAGES : integer   := 1;

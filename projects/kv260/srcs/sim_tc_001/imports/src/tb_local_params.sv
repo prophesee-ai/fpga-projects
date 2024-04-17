@@ -1,22 +1,16 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company:        Prophesee
-// Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
-//
-// Create Date:    Sept. 18, 2023
-// Design Name:    tb_local_params
-// Module Name:    
-// Project Name:   kv260
-// Target Devices: Zynq Ultrascale
-// Tool versions:  Vivado 2022.2
-// Description:    local param in system verilog for top test bench
-//////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Prophesee S.A. - All Rights Reserved
+// Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+// You may not use this file except in compliance with these License T&C's.
+
 // Define here access to Zynq VIP instance
 `define ZYNQ_VIP_0 test_bench.kv260_top_wrapper.kv260_top_i.zynq_processing_system.inst
+
 // Define AXI DMA signals for sniffing data to S2MM (Stream to Memory map)
 `define AXI_DMA_CLK   test_bench.kv260_top_wrapper.kv260_top_i.zynq_processing_system_pl_clk0
 `define AXI_DMA_READY test_bench.kv260_top_wrapper.kv260_top_i.S01_AXI_1_WREADY
 `define AXI_DMA_VALID test_bench.kv260_top_wrapper.kv260_top_i.S01_AXI_1_WVALID
 `define AXI_DMA_DATA  test_bench.kv260_top_wrapper.kv260_top_i.S01_AXI_1_WDATA
+
 // Define bit of init done for MIPI RX
 `define MIPI_RX_INIT_DONE_BIT test_bench.kv260_top_wrapper.kv260_top_i.mipi_csi2_rx_subsyst_0.U0.phy.init_done
 

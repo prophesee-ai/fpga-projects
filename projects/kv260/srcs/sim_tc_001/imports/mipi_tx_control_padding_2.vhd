@@ -1,15 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
--- Create Date:    Sep. 18, 2020
--- Design Name:    mipi_tx_control_padding
--- Module Name:    mipi_tx_control_padding
--- Project Name:   mipi_tx_control_padding
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2019.2
--- Description:
--- Dependencies:
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

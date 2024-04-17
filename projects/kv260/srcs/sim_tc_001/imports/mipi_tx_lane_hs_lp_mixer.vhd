@@ -1,15 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ny Onintsoa ANDRIAMANANJARA
--- Create Date:    11.02.2019
--- Design Name:    mipi_tx_lane_hs_lp_mixer
--- Module Name:    mipi_tx_lane_hs_lp_mixer.vhd
--- Project Name:
--- Target Devices: Vivado
--- Tool versions:  2018.2
--- Description:    Mixing MIPI LP and HS interface to a single HS interface
--- Dependencies:
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use     ieee.std_logic_1164.all;

@@ -1,16 +1,7 @@
 -------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Benoit Michel (bmichel@prophesee.ai)
--- Create Date:    January 22, 2023
--- Module Name:    axi4s_packet_timeout
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    AXI4-Stream Packet Timeout
---                 Insert the data present on the insert_tdata_i input if a
---                 tlast signal is not detected on the input data stream before
---                 the timeout counter reaches timeout_value_i.
---                 Since the input ready signal is combinatorial this pipeline
---                 stage must be preceded by a skid buffer.
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -19,6 +10,11 @@ use ieee.numeric_std.all;
 
 -----------------------------
 -- AXI4-Stream Packet Timeout
+-- Insert the data present on the insert_tdata_i input if a tlast signal is not
+-- detected on the input data stream before the timeout counter reaches
+-- timeout_value_i.
+-- Since the input ready signal is combinatorial this pipeline stage must be
+-- preceded by a skid buffer.
 entity axi4s_packet_timeout is
   generic (
     AXIL_DATA_WIDTH_G  : positive := 32;

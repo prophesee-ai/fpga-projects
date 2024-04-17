@@ -1,26 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
---
--- Create Date:    Nov. 16, 2023
--- Design Name:    evt21_th_recovery
--- Module Name:    evt21_th_recovery
--- Project Name:   psee_generic
--- Target Devices: Zynq US
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    Checks incoming Time High events and recover them if an
---                 incoherence is detected.
---                 This block's purpose is to avoid issues in event stream
---                 synchronization from different event sources.
---                 This module is heritance from evt20_th_recovery
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -33,6 +16,8 @@ use work.ccam_evt_type_v2_1_pkg.all;
 ----------------------------------------------------------
 -- Checks incoming Time High events and recover them if an
 -- incoherence is detected.
+-- This block purpose is to avoid issues in event stream synchronization from
+-- different event sources.
 entity evt21_th_recovery is
   generic (
     TIME_HIGH_PERIOD_US : positive := 16;

@@ -1,22 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
---
--- Create Date:    Sep. 11, 2017
--- Design Name:    lattice_mipi_tx_packet_if
--- Module Name:    lattice_mipi_tx_packet_if
--- Project Name:   ccam4_single_sisley
--- Target Devices: Lattice MachXO3
--- Tool versions:  Diamond 3.9
--- Description:    Converts the Generic MIPI IP I/F to Lattice's IP Interface.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

@@ -1,22 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Ludovic Chotard (lchotard@chronocam.com)
---
--- Create Date:    Dec. 28, 2017
--- Design Name:    mipi_tx_control_fifo
--- Module Name:    mipi_tx_control_fifo
--- Project Name:   ccam4_single_sisley
--- Target Devices: Lattice Machox3L
--- Tool versions:  Lattice Diamond 3.9.0
--- Description:    MIPI TX Control FIFO Block
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

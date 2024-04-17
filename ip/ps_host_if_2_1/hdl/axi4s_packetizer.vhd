@@ -1,18 +1,7 @@
 -------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Benoit Michel (bmichel@prophesee.ai)
--- Create Date:    January 31, 2024
--- Module Name:    axi4s_packetizer
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    AXI4-Stream Packetizer
---                 Delimit packets by inserting a tlast. The size of the
---                 packets is defined by packet_length_i.
---                 If timeout_i is high, the data counter for the packets
---                 is reset.
---                 Note that any incoming tlast will be ignored.
---                 It is also possible to replace incoming data with a raw
---                 counter patten.
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -21,6 +10,10 @@ use ieee.numeric_std.all;
 
 -----------------------------
 -- AXI4-Stream Packetizer
+-- Delimit packets by inserting a tlast. The size of the packets is defined by
+-- packet_length_i. If timeout_i is high, the data counter for the packets is reset.
+-- Note that any incoming tlast will be ignored.
+-- It is also possible to replace incoming data with a raw counter patten.
 entity axi4s_packetizer is
   generic (
     AXIL_DATA_WIDTH_G  : positive := 32;

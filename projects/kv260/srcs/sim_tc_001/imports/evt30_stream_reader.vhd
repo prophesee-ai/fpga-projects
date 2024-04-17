@@ -1,22 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Long XU (lxu@prophesee.ai)
---
--- Create Date:    Jun. 27, 2018
--- Design Name:    evt30_stream_reader
--- Module Name:    evt30_stream_reader
--- Project Name:   evt30_stream_reader
--- Target Devices:
--- Tool versions:  Xilinx Vivado 2016.4
--- Description:    Event 3.0 Stream Reader
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

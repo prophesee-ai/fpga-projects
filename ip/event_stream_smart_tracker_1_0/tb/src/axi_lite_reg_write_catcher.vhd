@@ -1,13 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ny Onintsoa ANDRIAMANANJARA
--- Create Date:    24.06.2019
--- Design Name:    axil_reg_catcher
--- Module Name:    axil_reg_catcher.vhd
--- Target Devices: All compatible
--- Tool versions:  2018.2
--- Description:    AXI4 Lite control register value catcher
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;

@@ -1,14 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
--- Create Date:    Sep. 8, 2017
--- Design Name:    xilinx_mipi_tx_ip_2l
--- Module Name:    xilinx_mipi_tx_ip_2l
--- Project Name:   ccam4_single_sisley
--- Target Devices: Xilinx 7 Series FPGA, Zynq Ultrascale +
--- Tool versions:  Xilinx Vivado 2018.2
--- Description:    MIPI CSI2 TX modeule 2 lanes
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

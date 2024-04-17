@@ -1,13 +1,9 @@
-----------------------------------------------------------------------------------
--- Company        : Prophesee
--- Engineer       : Ny Onintsoa ANDRIAMANANJARA
--- Create Date    : 14.01.2020
--- Design Name    : mipi_csi_tx_delay_ctrl
--- Module Name    : mipi_csi_tx_delay_ctrl.vhd
--- Target Devices : All compatible
--- Tool versions  : 2018.2
--- Description    : MIPI CSI-2 TX delay control
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.numeric_std.all;

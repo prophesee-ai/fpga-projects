@@ -1,23 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Vitor Schwambach (vschwambach@prophesee.ai)
--- 
--- Create Date:    May. 10, 2019
--- Design Name:    axi4s_cfg_fifo_merge_2_1
--- Module Name:    axi4s_cfg_fifo_merge_2_1
--- Project Name:   
--- Target Devices: 
--- Tool versions:  
--- Description:    Merges LSB and MSB Stream into a Single Output Stream, according
---                 to event format.
---
--- Dependencies:
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

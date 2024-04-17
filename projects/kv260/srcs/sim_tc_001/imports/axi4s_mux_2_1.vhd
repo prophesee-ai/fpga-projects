@@ -1,26 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
---
--- Create Date:    Dec 28, 2015
--- Design Name:    axi4s_mux_2_1
--- Module Name:    axi4s_mux_2_1
--- Project Name:   ccam2_tep
--- Target Devices: Artix 7
--- Tool versions:  Xilinx Vivado 2015.1
--- Description:    Multiplexes one of the input streams into the output interface
---                 according to the input selection signal.
---                 When in_select_i is '0', data of the "in0" interface is forwarded
---                 to the output interface, whereas when in_select_i is '1',
---                 data of the "in1" interface are forwarded to the output interface.
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
