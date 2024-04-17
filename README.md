@@ -26,7 +26,6 @@ The first levels of the package hierarchy are shown below.
 
 ```
 fpga-projects
-├── CHANGELOG.md
 ├── README.md
 ├── ip
 │   ├── axis_tkeep_handler_1_0
@@ -35,6 +34,7 @@ fpga-projects
 ├── projects
 |   └── kv260
 │       ├── README.md
+│       ├── CHANGELOG.md
 │       ├── kv260_RC_0_1_0.tcl
 │       ├── kv260_system_register.coe
 │       └── srcs
