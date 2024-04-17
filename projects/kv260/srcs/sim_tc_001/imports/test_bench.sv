@@ -8,7 +8,7 @@
 // Project Name:   kv260
 // Target Devices: Zynq Ultrascale
 // Tool versions:  Vivado 2022.2
-// Description:    test bench to simulate top kria generic
+// Description:    test bench to simulate top kv260
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1ns / 1ps
 `include "tb_local_params.sv"
