@@ -1,17 +1,16 @@
-**Prophesee's KRIA GENERIC**
+**Prophesee's KV260 project**
 ==========================================
 
 Overview
 --------
 
-This Prophesee System package contains the source files and scripts necessary to build the **Kria Generic** FPGA's project, named **kv260**. This projet targets the **Kria Plafeform: kv260** with FPGA **xck26** from **Xilinx**.
+This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA's project, named **kv260**. This projet targets the **Kria Plafeform: kv260** with FPGA **xck26** from **Xilinx**.
 
 This document provides instructions on:
 - Environment Requirements and Setup
 - Project Creation
 - Project Synthesis and Implementation
 - Project Simulation
-- IP Simulation
 
 For additional information or support, please contact Prophesee Support at [support@prophesee.ai](mailto:support@prophesee.ai)
 
@@ -26,31 +25,21 @@ The following table describes the main scripts and folders of the package.
 | --------------------------------------- | --------------------------------------------------------------------------- |
 | README.md                               | Readme file with package info                                               |
 | CHANGELOG.md                            | Changelog file with update info                                             |
-| common                                  | IP Repo directory with PSEE IP and sources for simulation                   |
-| psee_generic                            | TCL script for project generation, constraint file and top test bench       |
+| kv260                                   | TCL script for project generation, constraint file and top test bench       |
 
 
 The first levels of the package hierarchy are shown below.
 
 ```
-kria_psee_generic
+kv260
 ├── CHANGELOG.md
 ├── README.md
-├── common
-│   ├── ip_repo
-│       ├── axis_tkeep_handler_1_0
-│       ├── event_stream_smart_tracker_1_0
-│       └── ps_host_if_2_0
-│   └── src
-│       ├── axi4_stream
-│       ├── mipi
-│       ├── utils
-│       └── verification
-├── psee_generic
-│   ├── kv260_RC_0_1_0.tcl
-│   ├── kv260_system_register.coe
-│   ├── constr
-│   └── tb
+├── kv260_RC_0_1_0.tcl
+├── kv260_system_register.coe
+└── srcs
+    ├── sources_1
+    ├── constrs_1
+    └── sim_tc_001
 ```
 
 
@@ -87,13 +76,14 @@ Tool Version Limit: 2022.10
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ```
 
-## Create the project using the TCL script
+## Create a project using the TCL script
 
-To create the project, go into the **root** directory.
+To create the project, go into the **kv260** directory.
 Then run the following commands:
 
 ```
-$ vivado -source psee_generic/kv260_RC_0_1_0.tcl -tclargs --origin_dir "./psee_generic/" --project_name "./build/kv260/kv260"
+$ vivado -mode batch -source kv260_RC_0_1_0.tcl -tclargs --project_name "kv260"
+$ vivado kv260.xpr
 ```
 
 ## Top Simulations
@@ -124,14 +114,6 @@ To launch the project synthesis and implementation, follow the default Vivado wo
 
 #### Launch Synthesis and Implementation via Vivado GUI
 
-##### Open the *kv260* Vivado Project
-
-To open the project with the Vivado GUI run:
-
-```
-$ vivado build/kv260/kv260.xpr
-```
-
 ##### Run Generate Bitstream Step
 
 With the *kv260* project opened on the Vivado GUI, click on:
@@ -155,66 +137,6 @@ If nevertheless, the implementation run fails, please relaunch it:
 
 The project's bitstream file will be generated at:
 
-*build/kv260/kv260.runs/impl_1/kv260.bit*
-
-## Prophesee's Kria Generic IPs
-
-### axis_tkeep_handler_1_0 overall presentation
-
-The tkeep handler is in charge of giving to the rest of the pipeline, a full 64bits valid data.
-
-#### axis_tkeep_handler_1_0 overall verification and simulation
-
-There is no test bench nor valid simulation for the moment for this IP.
-
-### event_stream_smart_tracker_1_0 overall presentation
-
-The ESST regulate the back pressure coming from the ps_host_if. Various parameters are accessible through the GUI interface in the Block Design and change slightly the behavior of the IP. Functions of the IP are:
-  - Drop input events after a defined threshold.
-  - Analysing the timestamp and raise flags if condition are not met.
-  - Generate new TimeStamp event(s) such as TimeHigh if the IP detect a loss of them in the pipeline.
-  - Generate OTHERS event for the user to know when the drop occurs.
-
-#### event_stream_smart_tracker_1_0 overall verification and simulation
-
-To create the standalone test bench for simulation run from a terminal:
-
-```
-$ cd common/ip_repo/event_stream_smart_tracker_1_0/tb/
-$ vivado -source event_stream_smart_tracker_create_prj.tcl -tclargs event_stream_smart_tracker_tb
-```
-
-In the vivado GUI, select the simulation test case you want in the Project manager settings.
-
-| ID     | Module(s) tested   | Description                                             |
-| ------ | ------------------ | ------------------------------------------------------- |
-| TC_001 | ESST               | Nominal case with no bypass                             |
-| TC_002 | ESST               | Error case with smart dropper. Back pressure simulation |
-| TC_003 | ESST               | TC_002 with TH Recovery enable -> No TH should miss     |
-| TC_004 | ESST               | Error case with TS Checker                              |
-| TC_005 | ESST               | Nominal case with RAW Data (no evt) and control bypass  |
-
-### ps_host_if_2_0 overall presentation
-
-The PS Host Interface makes the interface between the intern pipeline of the PL to give to the DMA and thus PS the input (and processed) events. Functions of the IP are:
-  - Making the clock interface between PL and PS DMA.
-  - Pack the events into a different data vector width if necessary.
-  - Manage the tlast with TIMEOUT capability if necessary.
-  - Generate counter to output stream for debug or tests.
-
-#### ps_host_if_2_0 overall verification and simulation
-
-To create the standalone test bench for simulation run from a terminal:
-
-```
-$ cd common/ip_repo/ps_host_if_2_0/tb/
-$ vivado -source ps_host_if_create_prj.tcl -tclargs event_stream_smart_tracker_tb
-```
-
-In the vivado GUI, select the simulation test case you want in the Project manager settings.
-
-| ID     | Module(s) tested   | Description                                             |
-| ------ | ------------------ | ------------------------------------------------------- |
-| TC_001 | PS_HOST_IF         | Nominal case with no bypass                             |
+*kv260/kv260.runs/impl_1/kv260.bit*
 
 
