@@ -1,10 +1,10 @@
-**Prophesee's FPGA Projects**
-==========================================
+**Prophesee FPGA Projects**
+===========================
 
 Overview
 --------
 
-This Prophesee repository contains the source files and scripts necessary to build Psee's FPGA projects.
+This Prophesee repository contains the source files and scripts necessary to build Prophesee FPGA projects.
 
 For additional information or support, please contact Prophesee Support at [support@prophesee.ai](mailto:support@prophesee.ai)
 
@@ -18,11 +18,11 @@ The following table describes the main scripts and folders of the package.
 | Package File / Folder                   | Contents                                                                    |
 | --------------------------------------- | --------------------------------------------------------------------------- |
 | README.md                               | Readme file with package info                                               |
-| ip                                      | IP Repo directory with PSEE IPs                                             |
-| projects/kv260                          | TCL script for project generation, constraint file and top test bench       |
+| ip                                      | IP repository with Prophesee IPs                                            |
+| projects/kv260                          | TCL script and sources for kv260 project generation and simulation          |
 
 
-The first levels of the package hierarchy are shown below.
+The first levels of the package hierarchy are shown below:
 
 ```
 fpga-projects

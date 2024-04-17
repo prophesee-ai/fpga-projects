@@ -1,10 +1,10 @@
-**Prophesee's KV260 project**
-==========================================
+**Prophesee KV260 project**
+===========================
 
 Overview
 --------
 
-This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA's project, named **kv260**. This projet targets the **Kria Plafeform: kv260** with FPGA **xck26** from **Xilinx**.
+This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA project, named **kv260**. This projet targets the **AMD Kria Plafeform kv260** with FPGA **xck26**.
 
 This document provides instructions on:
 - Environment Requirements and Setup
@@ -64,7 +64,7 @@ This project has been tested and validated using the following configuration:
 ### Source the Xilinx Vivado Toolset
 Open a bash terminal and ensure you have sourced the Vivado 2022.2 Toolset, .i.e:
 ```
-$ /opt/eda/xilinx/2022.2/Vivado/2022.2/settings64.sh
+$ source settings64.sh
 ```
 Then check the tool version as follows:
 ```
