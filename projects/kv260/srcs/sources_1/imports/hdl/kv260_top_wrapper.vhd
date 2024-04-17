@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2.1 (lin64) Build 3719031 Thu Dec  8 18:35:06 MST 2022
---Date        : Wed Apr 17 14:01:21 2024
+--Date        : Wed Apr 17 17:06:17 2024
 --Host        : tars-system-u20 running 64-bit Ubuntu 20.04.6 LTS
 --Command     : generate_target kv260_top_wrapper.bd
 --Design      : kv260_top_wrapper
