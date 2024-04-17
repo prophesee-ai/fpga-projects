@@ -443,20 +443,6 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_softwaredriver</spirit:name>
-        <spirit:displayName>Software Driver</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a09ea8d6</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_xpgui</spirit:name>
         <spirit:displayName>UI Layout</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
@@ -1209,38 +1195,6 @@
       <spirit:file>
         <spirit:name>hdl/event_stream_smart_tracker.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/data/event_stream_smart_tracker.mdd</spirit:name>
-        <spirit:userFileType>mdd</spirit:userFileType>
-        <spirit:userFileType>driver_mdd</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/data/event_stream_smart_tracker.tcl</spirit:name>
-        <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>driver_tcl</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/src/Makefile</spirit:name>
-        <spirit:userFileType>driver_src</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/src/event_stream_smart_tracker.h</spirit:name>
-        <spirit:fileType>cSource</spirit:fileType>
-        <spirit:userFileType>driver_src</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/src/event_stream_smart_tracker.c</spirit:name>
-        <spirit:fileType>cSource</spirit:fileType>
-        <spirit:userFileType>driver_src</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>drivers/event_stream_smart_tracker_v1_0/src/event_stream_smart_tracker_selftest.c</spirit:name>
-        <spirit:fileType>cSource</spirit:fileType>
-        <spirit:userFileType>driver_src</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
