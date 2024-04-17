@@ -7,7 +7,7 @@ Overview
 This Prophesee repository contains the source files and scripts necessary to build Psee's FPGA projects.
 
 For additional information or support, please contact Prophesee Support at [support@prophesee.ai](mailto:support@prophesee.ai)
-cat 
+
 Package Structure
 -----------------
 
@@ -26,7 +26,7 @@ The following table describes the main scripts and folders of the package.
 The first levels of the package hierarchy are shown below.
 
 ```
-kria_psee_generic
+fpga-projects
 ├── CHANGELOG.md
 ├── README.md
 ├── ip
