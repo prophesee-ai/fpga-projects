@@ -18,7 +18,6 @@ The following table describes the main scripts and folders of the package.
 | Package File / Folder                   | Contents                                                                    |
 | --------------------------------------- | --------------------------------------------------------------------------- |
 | README.md                               | Readme file with package info                                               |
-| CHANGELOG.md                            | Changelog file with update info                                             |
 | ip                                      | IP Repo directory with PSEE IPs                                             |
 | projects/kv260                          | TCL script for project generation, constraint file and top test bench       |
 
@@ -35,7 +34,6 @@ fpga-projects
 │   └── ps_host_if_2_0
 ├── projects
 |   └── kv260
-│       ├── CHANGELOG.md
 │       ├── README.md
 │       ├── kv260_RC_0_1_0.tcl
 │       ├── kv260_system_register.coe
