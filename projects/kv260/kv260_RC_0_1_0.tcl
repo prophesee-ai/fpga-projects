@@ -20,61 +20,61 @@
 proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
- "[file normalize "$origin_dir/srcs/sources_1/imports/hdl/kv260_top_wrapper.vhd"]"\
- "[file normalize "$origin_dir/kv260_system_register.coe"]"\
- "[file normalize "$origin_dir/srcs/constrs_1/imports/constr/kv260_pinout_constraints.xdc"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/src/tb_local_params.sv"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/zynq_fpga_bfm.sv"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4_pipeline_stage_2.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/ccam_utils.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_cfg_fifo_merge_2_1.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/ccam_evt_formats.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/ccam_evt_types.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/ccam_evt_types_v3.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_cfg_sync_fifo.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_demux_1_2.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_fork_1_2.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_mux_2_1.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi4s_sync_fifo_xpm.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axi_lite_master_bfm.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axis_ready_pipe.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/axis_serializer.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/ccam_evt_type_v2_1.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/clk_rst_bfm.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/clk_rst_gen.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/crc16_2lane.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt_verification_pkg.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt20_sequencer.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt20_stream_reader.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt30_sequencer.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt30_stream_reader.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt_record_generic.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/evt_stream_reader.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/file_stream_reader.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_csi_tx_delay_ctrl.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_csi_tx_dphy.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_csi_tx_packetheader.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_2l_axil_bfm.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control_fifo_xilinx.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control_in_frame.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control_in_packet.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control_out.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_control_padding_2.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_fifo.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_lane_hs_lp_mixer.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_reg_bank_pkg.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_reg_bank.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/mipi_tx_sim_bfm.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/xilinx_mipi_tx_axil_2l.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/xilinx_mipi_tx_ip_2l.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/xilinx_mipi_tx_packet_if.vhd"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/test_bench.sv"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/pattern/axil_bfm_mipi_tx.pat"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/pattern/axil_bfm_fpga.pat"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/pattern/in_evt_file.evt"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/pattern/ref_evt_file.evt"]"\
- "[file normalize "$origin_dir/srcs/sim_tc_001/imports/pattern/kv260_init_mem.mem"]"\
+ "[file normalize "$origin_dir/srcs/hdl/kv260_top_wrapper.vhd"]"\
+ "[file normalize "$origin_dir/srcs/coe/kv260_system_register.coe"]"\
+ "[file normalize "$origin_dir/srcs/constr/kv260_pinout_constraints.xdc"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/tb_local_params.sv"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/zynq_fpga_bfm.sv"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4_pipeline_stage_2.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/ccam_utils.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_cfg_fifo_merge_2_1.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/ccam_evt_formats.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/ccam_evt_types.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/ccam_evt_types_v3.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_cfg_sync_fifo.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_demux_1_2.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_fork_1_2.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_mux_2_1.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi4s_sync_fifo_xpm.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axi_lite_master_bfm.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axis_ready_pipe.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/axis_serializer.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/ccam_evt_type_v2_1.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/clk_rst_bfm.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/clk_rst_gen.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/crc16_2lane.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt_verification_pkg.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt20_sequencer.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt20_stream_reader.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt30_sequencer.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt30_stream_reader.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt_record_generic.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/evt_stream_reader.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/file_stream_reader.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_csi_tx_delay_ctrl.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_csi_tx_dphy.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_csi_tx_packetheader.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_2l_axil_bfm.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control_fifo_xilinx.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control_in_frame.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control_in_packet.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control_out.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_control_padding_2.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_fifo.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_lane_hs_lp_mixer.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_reg_bank_pkg.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_reg_bank.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/mipi_tx_sim_bfm.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/xilinx_mipi_tx_axil_2l.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/xilinx_mipi_tx_ip_2l.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/xilinx_mipi_tx_packet_if.vhd"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/hdl/test_bench.sv"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/pattern/axil_bfm_mipi_tx.pat"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/pattern/axil_bfm_fpga.pat"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/pattern/in_evt_file.evt"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/pattern/ref_evt_file.evt"]"\
+ "[file normalize "$origin_dir/srcs/sim_tc_001/pattern/kv260_init_mem.mem"]"\
   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
@@ -216,8 +216,8 @@ if { $obj != {} } {
 set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/srcs/sources_1/imports/hdl/kv260_top_wrapper.vhd"]\
- [file normalize "${origin_dir}/kv260_system_register.coe" ]\
+ [file normalize "${origin_dir}/srcs/hdl/kv260_top_wrapper.vhd"]\
+ [file normalize "${origin_dir}/srcs/coe/kv260_system_register.coe"]\
 ]
 set imported_files [add_files -fileset sources_1 $files]
 
@@ -244,7 +244,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize ${origin_dir}/srcs/constrs_1/imports/constr/kv260_pinout_constraints.xdc]"
+set file "[file normalize ${origin_dir}/srcs/constr/kv260_pinout_constraints.xdc]"
 set file_imported [add_files -fileset constrs_1 [list $file]]
 set file "constr/kv260_pinout_constraints.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
@@ -262,58 +262,58 @@ if {[string equal [get_filesets -quiet sim_tc_001] ""]} {
 set obj [get_filesets sim_tc_001]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/src/tb_local_params.sv"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/zynq_fpga_bfm.sv"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4_pipeline_stage_2.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/ccam_utils.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_cfg_fifo_merge_2_1.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/ccam_evt_formats.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/ccam_evt_types.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/ccam_evt_types_v3.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_cfg_sync_fifo.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_demux_1_2.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_fork_1_2.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_mux_2_1.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi4s_sync_fifo_xpm.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axi_lite_master_bfm.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axis_ready_pipe.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/axis_serializer.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/ccam_evt_type_v2_1.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/clk_rst_bfm.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/clk_rst_gen.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/crc16_2lane.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt_verification_pkg.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt20_sequencer.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt20_stream_reader.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt30_sequencer.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt30_stream_reader.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt_record_generic.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/evt_stream_reader.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/file_stream_reader.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_csi_tx_delay_ctrl.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_csi_tx_dphy.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_csi_tx_packetheader.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_2l_axil_bfm.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control_fifo_xilinx.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control_in_frame.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control_in_packet.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control_out.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_control_padding_2.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_fifo.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_lane_hs_lp_mixer.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_reg_bank_pkg.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_reg_bank.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/mipi_tx_sim_bfm.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/xilinx_mipi_tx_axil_2l.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/xilinx_mipi_tx_ip_2l.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/xilinx_mipi_tx_packet_if.vhd"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/test_bench.sv"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/pattern/axil_bfm_mipi_tx.pat"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/pattern/axil_bfm_fpga.pat"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/pattern/in_evt_file.evt"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/pattern/ref_evt_file.evt"]\
- [file normalize "${origin_dir}/srcs/sim_tc_001/imports/pattern/kv260_init_mem.mem"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/tb_local_params.sv"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/zynq_fpga_bfm.sv"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4_pipeline_stage_2.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/ccam_utils.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_cfg_fifo_merge_2_1.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/ccam_evt_formats.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/ccam_evt_types.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/ccam_evt_types_v3.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_cfg_sync_fifo.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_demux_1_2.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_fork_1_2.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_mux_2_1.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi4s_sync_fifo_xpm.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axi_lite_master_bfm.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axis_ready_pipe.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/axis_serializer.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/ccam_evt_type_v2_1.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/clk_rst_bfm.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/clk_rst_gen.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/crc16_2lane.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt_verification_pkg.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt20_sequencer.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt20_stream_reader.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt30_sequencer.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt30_stream_reader.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt_record_generic.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/evt_stream_reader.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/file_stream_reader.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_csi_tx_delay_ctrl.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_csi_tx_dphy.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_csi_tx_packetheader.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_2l_axil_bfm.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control_fifo_xilinx.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control_in_frame.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control_in_packet.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control_out.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_control_padding_2.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_fifo.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_lane_hs_lp_mixer.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_reg_bank_pkg.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_reg_bank.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/mipi_tx_sim_bfm.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/xilinx_mipi_tx_axil_2l.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/xilinx_mipi_tx_ip_2l.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/xilinx_mipi_tx_packet_if.vhd"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/hdl/test_bench.sv"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/pattern/axil_bfm_mipi_tx.pat"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/pattern/axil_bfm_fpga.pat"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/pattern/in_evt_file.evt"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/pattern/ref_evt_file.evt"]\
+ [file normalize "${origin_dir}/srcs/sim_tc_001/pattern/kv260_init_mem.mem"]\
 ]
 set imported_files [add_files -fileset sim_tc_001 $files]
 
@@ -321,191 +321,191 @@ set imported_files [add_files -fileset sim_tc_001 $files]
 # None
 
 # Set 'sim_tc_001' fileset file properties for local files
-set file "src/tb_local_params.sv"
+set file "hdl/tb_local_params.sv"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "Verilog Header" -objects $file_obj
 
-set file "imports/zynq_fpga_bfm.sv"
+set file "hdl/zynq_fpga_bfm.sv"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "imports/axi4_pipeline_stage_2.vhd"
+set file "hdl/axi4_pipeline_stage_2.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/ccam_utils.vhd"
+set file "hdl/ccam_utils.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_cfg_fifo_merge_2_1.vhd"
+set file "hdl/axi4s_cfg_fifo_merge_2_1.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/ccam_evt_formats.vhd"
+set file "hdl/ccam_evt_formats.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/ccam_evt_types.vhd"
+set file "hdl/ccam_evt_types.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/ccam_evt_types_v3.vhd"
+set file "hdl/ccam_evt_types_v3.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_cfg_sync_fifo.vhd"
+set file "hdl/axi4s_cfg_sync_fifo.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_demux_1_2.vhd"
+set file "hdl/axi4s_demux_1_2.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_fork_1_2.vhd"
+set file "hdl/axi4s_fork_1_2.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_mux_2_1.vhd"
+set file "hdl/axi4s_mux_2_1.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi4s_sync_fifo_xpm.vhd"
+set file "hdl/axi4s_sync_fifo_xpm.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axi_lite_master_bfm.vhd"
+set file "hdl/axi_lite_master_bfm.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axis_ready_pipe.vhd"
+set file "hdl/axis_ready_pipe.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/axis_serializer.vhd"
+set file "hdl/axis_serializer.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/ccam_evt_type_v2_1.vhd"
+set file "hdl/ccam_evt_type_v2_1.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/clk_rst_bfm.vhd"
+set file "hdl/clk_rst_bfm.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/clk_rst_gen.vhd"
+set file "hdl/clk_rst_gen.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/crc16_2lane.vhd"
+set file "hdl/crc16_2lane.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt_verification_pkg.vhd"
+set file "hdl/evt_verification_pkg.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt20_sequencer.vhd"
+set file "hdl/evt20_sequencer.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt20_stream_reader.vhd"
+set file "hdl/evt20_stream_reader.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt30_sequencer.vhd"
+set file "hdl/evt30_sequencer.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt30_stream_reader.vhd"
+set file "hdl/evt30_stream_reader.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt_record_generic.vhd"
+set file "hdl/evt_record_generic.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/evt_stream_reader.vhd"
+set file "hdl/evt_stream_reader.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/file_stream_reader.vhd"
+set file "hdl/file_stream_reader.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_csi_tx_delay_ctrl.vhd"
+set file "hdl/mipi_csi_tx_delay_ctrl.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_csi_tx_dphy.vhd"
+set file "hdl/mipi_csi_tx_dphy.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_csi_tx_packetheader.vhd"
+set file "hdl/mipi_csi_tx_packetheader.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_2l_axil_bfm.vhd"
+set file "hdl/mipi_tx_2l_axil_bfm.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control.vhd"
+set file "hdl/mipi_tx_control.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control_fifo_xilinx.vhd"
+set file "hdl/mipi_tx_control_fifo_xilinx.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control_in_frame.vhd"
+set file "hdl/mipi_tx_control_in_frame.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control_in_packet.vhd"
+set file "hdl/mipi_tx_control_in_packet.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control_out.vhd"
+set file "hdl/mipi_tx_control_out.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_control_padding_2.vhd"
+set file "hdl/mipi_tx_control_padding_2.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_fifo.vhd"
+set file "hdl/mipi_tx_fifo.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_lane_hs_lp_mixer.vhd"
+set file "hdl/mipi_tx_lane_hs_lp_mixer.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_reg_bank_pkg.vhd"
+set file "hdl/mipi_tx_reg_bank_pkg.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_reg_bank.vhd"
+set file "hdl/mipi_tx_reg_bank.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/mipi_tx_sim_bfm.vhd"
+set file "hdl/mipi_tx_sim_bfm.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/xilinx_mipi_tx_axil_2l.vhd"
+set file "hdl/xilinx_mipi_tx_axil_2l.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/xilinx_mipi_tx_ip_2l.vhd"
+set file "hdl/xilinx_mipi_tx_ip_2l.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/xilinx_mipi_tx_packet_if.vhd"
+set file "hdl/xilinx_mipi_tx_packet_if.vhd"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "imports/test_bench.sv"
+set file "hdl/test_bench.sv"
 set file_obj [get_files -of_objects [get_filesets sim_tc_001] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
@@ -532,10 +532,10 @@ set_property -name "file_type" -value "Memory Initialization Files" -objects $fi
 
 # Set 'sim_tc_001' fileset properties
 set obj [get_filesets sim_tc_001]
-set_property -name "generic" -value "AXIL_MIPI_TX_PATTERN_FILE_G=../../../../srcs/sim_tc_001/imports/pattern/axil_bfm_mipi_tx.pat AXIL_FPGA_PATTERN_FILE_G=../../../../srcs/sim_tc_001/imports/pattern/axil_bfm_fpga.pat IN_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/in_evt_file.evt REF_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/ref_evt_file.evt INIT_MEM_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/kv260_init_mem.mem OUT_MEM_FILE_PATH_G=\"kv260_out_mem.mem\"" -objects $obj
+set_property -name "generic" -value "AXIL_MIPI_TX_PATTERN_FILE_G=../../../../srcs/sim_tc_001/pattern/axil_bfm_mipi_tx.pat AXIL_FPGA_PATTERN_FILE_G=../../../../srcs/sim_tc_001/pattern/axil_bfm_fpga.pat IN_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/in_evt_file.evt REF_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/ref_evt_file.evt INIT_MEM_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/kv260_init_mem.mem OUT_MEM_FILE_PATH_G=\"kv260_out_mem.mem\"" -objects $obj
 set_property -name "top" -value "test_bench" -objects $obj
 set_property -name "top_auto_set" -value "0" -objects $obj
-set_property -name "vhdl_generic" -value "AXIL_MIPI_TX_PATTERN_FILE_G=../../../../srcs/sim_tc_001/imports/pattern/axil_bfm_mipi_tx.pat AXIL_FPGA_PATTERN_FILE_G=../../../../srcs/sim_tc_001/imports/pattern/axil_bfm_fpga.pat IN_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/in_evt_file.evt REF_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/ref_evt_file.evt INIT_MEM_FILE_PATH_G=../../../../srcs/sim_tc_001/imports/pattern/kv260_init_mem.mem OUT_MEM_FILE_PATH_G=\"kv260_out_mem.mem\"" -objects $obj
+set_property -name "vhdl_generic" -value "AXIL_MIPI_TX_PATTERN_FILE_G=../../../../srcs/sim_tc_001/pattern/axil_bfm_mipi_tx.pat AXIL_FPGA_PATTERN_FILE_G=../../../../srcs/sim_tc_001/pattern/axil_bfm_fpga.pat IN_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/in_evt_file.evt REF_DATA_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/ref_evt_file.evt INIT_MEM_FILE_PATH_G=../../../../srcs/sim_tc_001/pattern/kv260_init_mem.mem OUT_MEM_FILE_PATH_G=\"kv260_out_mem.mem\"" -objects $obj
 set_property -name "xsim.elaborate.rangecheck" -value "1" -objects $obj
 set_property -name "xsim.simulate.runtime" -value "25ms" -objects $obj
 set_property -name "xsim.simulate.saif_scope" -value "kv260_top_wrapper" -objects $obj
@@ -567,7 +567,7 @@ proc cr_bd_kv260_top { parentCell } {
   ##################################################################
   set bCheckIPs 1
   if { $bCheckIPs == 1 } {
-     set list_check_ips "\ 
+     set list_check_ips "\
   xilinx.com:ip:xlconcat:2.1\
   xilinx.com:ip:axi_bram_ctrl:4.1\
   xilinx.com:ip:axi_dma:7.1\
@@ -778,8 +778,9 @@ proc cr_bd_kv260_top { parentCell } {
 
   # Create instance: system_register, and set properties
   set system_register [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 system_register ]
+  set system_register_coe_file [get_files -of [get_filesets sources_1] kv260_system_register.coe]
   set_property -dict [list \
-    CONFIG.Coe_File {/sim/lrobin/work/system-rtl/build/prj/kv260/kv260_system_register.coe} \
+    CONFIG.Coe_File $system_register_coe_file \
     CONFIG.EN_SAFETY_CKT {false} \
     CONFIG.EN_SLEEP_PIN {false} \
     CONFIG.Enable_32bit_Address {true} \
@@ -1911,12 +1912,12 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
 
   validate_bd_design
   save_bd_design
-  close_bd_design $design_name 
+  close_bd_design $design_name
 }
 # End of cr_bd_kv260_top()
 cr_bd_kv260_top ""
-set_property REGISTERED_WITH_MANAGER "1" [get_files kv260_top.bd ] 
-set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [get_files kv260_top.bd ] 
+set_property REGISTERED_WITH_MANAGER "1" [get_files kv260_top.bd ]
+set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [get_files kv260_top.bd ]
 
 set idrFlowPropertiesConstraints ""
 catch {

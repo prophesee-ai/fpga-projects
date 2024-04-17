@@ -35,10 +35,10 @@ kv260
 ├── CHANGELOG.md
 ├── README.md
 ├── kv260_RC_0_1_0.tcl
-├── kv260_system_register.coe
 └── srcs
-    ├── sources_1
-    ├── constrs_1
+    ├── coe
+    ├── constr
+    ├── hdl
     └── sim_tc_001
 ```
 
@@ -138,5 +138,3 @@ If nevertheless, the implementation run fails, please relaunch it:
 The project's bitstream file will be generated at:
 
 *kv260/kv260.runs/impl_1/kv260.bit*
-
-
