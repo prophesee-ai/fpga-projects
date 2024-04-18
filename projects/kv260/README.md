@@ -34,7 +34,7 @@ The first levels of the package hierarchy are shown below.
 kv260
 ├── CHANGELOG.md
 ├── README.md
-├── kv260_RC_0_1_0.tcl
+├── kv260_RC_0_2_2.tcl
 └── srcs
     ├── coe
     ├── constr
@@ -82,7 +82,7 @@ To create the project, go into the **kv260** directory.
 Then run the following commands:
 
 ```
-$ vivado -mode batch -source kv260_RC_0_1_0.tcl -tclargs --project_name "kv260"
+$ vivado -mode batch -source kv260_RC_0_2_2.tcl -tclargs --project_name "kv260"
 $ vivado kv260.xpr
 ```
 
