@@ -1,28 +1,15 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Vitor Schwambach (vschwambach@chronocam.com)
--- 
--- Create Date:    Dec 28, 2015
--- Design Name:    rst_synchronizer
--- Module Name:    rst_synchronizer
--- Project Name:   ccam2_tep
--- Target Devices: Artix 7
--- Tool versions:  Xilinx Vivado 2015.1
--- Description:    rst_synchronizer for std_logic data clock-domain crossings.
---
--- Dependencies:   
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 ---------------------
--- Reset Synchronizer
+-- Reset Synchronizer for std_logic data clock-domain crossings.
 entity rst_synchronizer is
   generic (
     SYNC_DEPTH       : positive := 2; -- Synchronizer depth, the number of

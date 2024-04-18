@@ -1,10 +1,10 @@
-**Prophesee's KV260 project**
-==========================================
+**Prophesee KV260 project**
+===========================
 
 Overview
 --------
 
-This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA's project, named **kv260**. This projet targets the **Kria Plafeform: kv260** with FPGA **xck26** from **Xilinx**.
+This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA project, named **kv260**. This projet targets the **AMD Kria Plafeform kv260** with FPGA **xck26**.
 
 This document provides instructions on:
 - Environment Requirements and Setup
@@ -34,11 +34,11 @@ The first levels of the package hierarchy are shown below.
 kv260
 ├── CHANGELOG.md
 ├── README.md
-├── kv260_RC_0_1_0.tcl
-├── kv260_system_register.coe
+├── kv260_RC_0_2_2.tcl
 └── srcs
-    ├── sources_1
-    ├── constrs_1
+    ├── coe
+    ├── constr
+    ├── hdl
     └── sim_tc_001
 ```
 
@@ -64,7 +64,7 @@ This project has been tested and validated using the following configuration:
 ### Source the Xilinx Vivado Toolset
 Open a bash terminal and ensure you have sourced the Vivado 2022.2 Toolset, .i.e:
 ```
-$ /opt/eda/xilinx/2022.2/Vivado/2022.2/settings64.sh
+$ source settings64.sh
 ```
 Then check the tool version as follows:
 ```
@@ -82,7 +82,7 @@ To create the project, go into the **kv260** directory.
 Then run the following commands:
 
 ```
-$ vivado -mode batch -source kv260_RC_0_1_0.tcl -tclargs --project_name "kv260"
+$ vivado -mode batch -source kv260_RC_0_2_2.tcl -tclargs --project_name "kv260"
 $ vivado kv260.xpr
 ```
 
@@ -138,5 +138,3 @@ If nevertheless, the implementation run fails, please relaunch it:
 The project's bitstream file will be generated at:
 
 *kv260/kv260.runs/impl_1/kv260.bit*
-
-

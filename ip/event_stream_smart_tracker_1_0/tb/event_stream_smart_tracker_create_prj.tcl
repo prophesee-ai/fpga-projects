@@ -1,11 +1,6 @@
-#*****************************************************************************************
-#
-#  Create Project
-#
-#  Tool:     Xilinx Vivado
-#  Project:  Event Stream Smart Tracker standalone test bench
-#
-#*****************************************************************************************
+# Copyright (c) Prophesee S.A. - All Rights Reserved
+# Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+# You may not use this file except in compliance with these License T&C's.
 
 package require fileutil
 package require inifile

@@ -1,3 +1,7 @@
+# Copyright (c) Prophesee S.A. - All Rights Reserved
+# Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+# You may not use this file except in compliance with these License T&C's.
+
 
 # Loading additional proc with user specified bodies to compute parameter values.
 source [file join [file dirname [file dirname [info script]]] gui/event_stream_smart_tracker_v1_0.gtcl]

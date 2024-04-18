@@ -1,15 +1,7 @@
-
 -------------------------------------------------------------------------------
--- Copyright 2015-2023 Prophesee
---
--- Company:        Prophesee
--- Module Name:    axis_tkeep_handler_reg_bank
--- Description:    AXIS TKEEP HANDLER Register Bank
--- Comment:
---
--- Note:           File generated automatically by Prophesee's
---                 Register Map to AXI4-Lite tool.
---                 Please do not modify its contents.
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
 -------------------------------------------------------------------------------
 
 library ieee;

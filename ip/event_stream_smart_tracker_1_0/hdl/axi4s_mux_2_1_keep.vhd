@@ -1,15 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Prophesee
--- Engineer:       Ladislas ROBIN (lrobin@prophesee.ai)
---
--- Create Date:    Dec. 11 2023
--- Design Name:    axi4s_mux_2_1
--- Module Name:    axi4s_mux_2_1
--- Project Name:   psee_generic
--- Target Devices: Zynq US
--- Tool versions:  Xilinx Vivado 2022.2
--- Description:    Data width variable mux of Axi4Stream with first and keep signals (heritates from original 2 to 1 mux)
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

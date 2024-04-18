@@ -1,24 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:        Chronocam
--- Engineer:       Long XU (lxu@chronocam.com)
---
--- Create Date:    May. 19, 2017
--- Design Name:    evt_replay
--- Module Name:    evt_replay
--- Project Name:   common
--- Target Devices: Artix 7
--- Tool versions:  Xilinx Vivado 2016.4
--- Description:    Reads an events stream from a file and replays it
---                 on its AXI4-Stream output port.
---                 Valid line toggles with the VALID_RATIO.
+-------------------------------------------------------------------------------
+-- Copyright (c) Prophesee S.A. - All Rights Reserved
+-- Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
+-- You may not use this file except in compliance with these License T&C's.
+-------------------------------------------------------------------------------
 
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
