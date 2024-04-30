@@ -1,7 +1,3 @@
-# Copyright (c) Prophesee S.A. - All Rights Reserved
-# Subject to Starter Kit Specific Terms and Conditions ("License T&C's").
-# You may not use this file except in compliance with these License T&C's.
-
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
