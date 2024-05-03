@@ -1,12 +1,19 @@
-## 0.1.0 - (2024-04-17)
+## 0.2.3 - (2024-05-03)
 ---
 
 ### New
-* First released of kv260 project, with:
-    - Project generation scripts
+* License changed to Apache-2.0
+* Missing logo added to Prophesee IPs
+
+
+## 0.2.2 - (2024-04-18)
+---
+
+### New
+* First release of kv260 project, with:
+    - Project generation script
     - Simulation pattern sources
-    - List of PSEE IPs for Vivado :
-      - PS_HOST_IF (Interface with DMA and PS Unit, also control tlast timeout)
-      - EVENT_STREAM_SMART_TRACKER (BackPressure control and management of overflow)
-      - TKEEP_HANDLER (Managing the TKEEP signals)
-      - Among with their standalone test-benches if exists
+    - Prophesee IPs for Vivado (with their standalone testbenches when they exist):
+      - ps_host_if v2.1 (Interface with DMA and PS unit, also control tlast timeout)
+      - event_stream_smart_tracker v1.0 (Back-pressure control and overflow management)
+      - axis_tkeep_handler v1.1 (Managing the TKEEP signals)

@@ -34,7 +34,7 @@ fpga-projects
 └── projects
     └── kv260
         ├── README.md
-        ├── kv260_RC_0_2_2.tcl
+        ├── kv260_RC_0_2_3.tcl
         └── srcs
             ├── coe
             ├── constr
