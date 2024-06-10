@@ -34,7 +34,7 @@ The first levels of the package hierarchy are shown below.
 kv260
 ├── CHANGELOG.md
 ├── README.md
-├── kv260_RC_0_2_3.tcl
+├── kv260_RC_1_0_0.tcl
 └── srcs
     ├── coe
     ├── constr
@@ -56,24 +56,26 @@ This project has been tested and validated using the following configuration:
   - Codename: Focal
   - Terminal: GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
 - Xilinx Vivado Toolset:
-  - Vivado v2022.2.1 (64-bit)
-  - SW Build 3719031 on Thu Dec  8 18:35:06 MST 2022
-  - IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
+  - Vivado v2024.1 (64-bit)
+  - SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  - IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   - With installed support for Zynq US+ Devices
 
 ### Source the Xilinx Vivado Toolset
-Open a bash terminal and ensure you have sourced the Vivado 2022.2 Toolset, .i.e:
+Open a bash terminal and ensure you have sourced the Vivado 2024.1 Toolset, .i.e:
 ```
 $ source settings64.sh
 ```
 Then check the tool version as follows:
 ```
 $ vivado -version
-Vivado v2022.2.1 (64-bit)
-SW Build 3719031 on Thu Dec  8 18:35:06 MST 2022
-IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
-Tool Version Limit: 2022.10
+vivado v2024.1 (64-bit)
+Tool Version Limit: 2024.05
+SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ```
 
 ## Create a project using the TCL script
@@ -82,7 +84,7 @@ To create the project, go into the **kv260** directory.
 Then run the following commands:
 
 ```
-$ vivado -mode batch -source kv260_RC_0_2_3.tcl -tclargs --project_name "kv260"
+$ vivado -mode batch -source kv260_RC_1_0_0.tcl -tclargs --project_name "kv260"
 $ vivado kv260.xpr
 ```
 

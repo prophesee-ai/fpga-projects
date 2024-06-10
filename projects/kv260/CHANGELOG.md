@@ -1,3 +1,13 @@
+## 1.0.0 - (2024-06-10)
+---
+
+### New
+* Update kv260 project to Vivado 2024.1:
+    - Update MIPI CSI-2 RX Subsystem IP from 5.2 to 6.0
+    - Update Zynq Ultrascale+ MPSoc IP from 3.4 to 3.5
+    - Update minor (revision) on some IPs
+
+
 ## 0.2.3 - (2024-05-03)
 ---
 
