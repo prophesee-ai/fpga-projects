@@ -1,0 +1,13 @@
+Version 2.0:
+ * Follow new Prophesee IP guidelines
+ * Add enable and global reset signals
+ * Update documentation
+ * Add test cases
+
+Version 1.1:
+ * Clock and reset common to AXI-Lite and AXI-Stream interfaces
+ * s_axi interface renamed to s_axi_lite
+ * tkeep bug fixed
+
+Version 1.0:
+ * First version released

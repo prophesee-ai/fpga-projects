@@ -1,140 +1,18 @@
-**Prophesee KV260 project**
-===========================
+# Prophesee KV260 Project
 
-Overview
---------
+## Overview
 
-This Prophesee KV260 package contains the source files and scripts necessary to build the **KV260** FPGA project, named **kv260**. This projet targets the **AMD Kria Plafeform kv260** with FPGA **xck26**.
+The Prophesee KV260 FPGA project is designed for the AMD KV260 Vision AI Starter Kit. It captures event data from a single MIPI sensor device and forward it to the FPGA Processor Side (PS) for processing and rendering.
 
-This document provides instructions on:
-- Environment Requirements and Setup
-- Project Creation
-- Project Synthesis and Implementation
-- Project Simulation
+The figure below shows the top level diagram of the KV260 project with the data pipeline.
 
-For additional information or support, please contact Prophesee Support at [support@prophesee.ai](mailto:support@prophesee.ai)
+![PL Event Pipeline](doc/img/kv260_PL_top_gpio.png "PL Event Pipeline")
 
-Package Structure
------------------
+## IP Used
 
-### Contents
-
-The following table describes the main scripts and folders of the package.
-
-| Package File / Folder                   | Contents                                                                    |
-| --------------------------------------- | --------------------------------------------------------------------------- |
-| README.md                               | Readme file with package info                                               |
-| CHANGELOG.md                            | Changelog file with update info                                             |
-| kv260                                   | TCL script for project generation, constraint file and top test bench       |
-
-
-The first levels of the package hierarchy are shown below.
-
-```
-kv260
-├── CHANGELOG.md
-├── README.md
-├── kv260_RC_0_2_3.tcl
-└── srcs
-    ├── coe
-    ├── constr
-    ├── hdl
-    └── sim_tc_001
-```
-
-
-## Environment Setup
-
-### Requirements
-
-This project has been tested and validated using the following configuration:
-
-- Operating System:
-  - Distributor ID: Ubuntu
-  - Description: Ubuntu 20.04.6 LTS
-  - Release: 20.04.6 LTS (Focal Fossa)
-  - Codename: Focal
-  - Terminal: GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
-- Xilinx Vivado Toolset:
-  - Vivado v2022.2.1 (64-bit)
-  - SW Build 3719031 on Thu Dec  8 18:35:06 MST 2022
-  - IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
-  - With installed support for Zynq US+ Devices
-
-### Source the Xilinx Vivado Toolset
-Open a bash terminal and ensure you have sourced the Vivado 2022.2 Toolset, .i.e:
-```
-$ source settings64.sh
-```
-Then check the tool version as follows:
-```
-$ vivado -version
-Vivado v2022.2.1 (64-bit)
-SW Build 3719031 on Thu Dec  8 18:35:06 MST 2022
-IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
-Tool Version Limit: 2022.10
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-```
-
-## Create a project using the TCL script
-
-To create the project, go into the **kv260** directory.
-Then run the following commands:
-
-```
-$ vivado -mode batch -source kv260_RC_0_2_3.tcl -tclargs --project_name "kv260"
-$ vivado kv260.xpr
-```
-
-## Top Simulations
-
-The project contains simulations sources with supported references files for input and matchpoint output.
-For now, top simulation of the project contains one sanity test case, running standalone with full integration of the global design:
-
-| ID     | Module(s) tested   | Description               |
-| ------ | ------------------ | ------------------------- |
-| TC_001 | TOP                | Sanity test               |
-
-### Launch Top Simulation
-
-To launch the top project simulation tc_001, select the tc_001 simulation source into the project manager settings and follow the default Vivado workflow using the GUI
-
-## Synthesis and Implementation
-
-The project contains the following synthesis and implementation runs pre-configured:
-
-| Run Name | Description        | Strategy                  |
-| -------- | ------------------ | ------------------------- |
-| synth_1  | Synthesis run      | Vivado Synthesis Defaults |
-| impl_1   | Implementation run | Performance_Retiming      |
-
-### Launch Synthesis and Implementation
-
-To launch the project synthesis and implementation, follow the default Vivado workflow using the GUI.
-
-#### Launch Synthesis and Implementation via Vivado GUI
-
-##### Run Generate Bitstream Step
-
-With the *kv260* project opened on the Vivado GUI, click on:
-
-*PROGRAM AND DEBUG --> Generate Bitstream*
-
-##### Check Results
-
-To check that the design successfully meets the timing closure, run the timing analysis as follows:
-
-*IMPLEMENTATION --> Open Implemented Design --> Report Timing Summary*
-
-Ensure that there is no timing violations.
-
-**Note:** There can be small variations between synthesis and implementation runs.
-We're continuously working to improve the predictability and robustness of the system.
-If nevertheless, the implementation run fails, please relaunch it:
-1. Right-click on **synth_1** run in **Design Runs** tab
-2. Click on **Reset Runs**
-3. Relaunch the synthesis and implementation runs: **PROGRAM AND DEBUG** --> **Generate Bitstream**
-
-The project's bitstream file will be generated at:
-
-*kv260/kv260.runs/impl_1/kv260.bit*
+- The MIPI CSI-2 RX SubSystem module from AMD is the receiver of the 2 MIPI Lanes that inputs raw data from the EB Sensor (among with clock lane). It implements a CSI-2 receive interface according to the MIPI CSI-2 standard v2.0 with underlying MIPI D-PHY standard v1.2. The subsystem is configured to received RAW8 pixel format with a 1500 Mbps line rate and output a AXI4-Stream 64 bits width that support Prophesee event format 2.1 (event-vector, high event rate, 64-bit based). For more information, see the MIPI CSI-2 Receiver Subsystem
+Product Guide (PG232).
+- The Prophesee AXIS tkeep Handler manages the tkeep signal to be always fully valid to feed the next component. Tkeep is a vector in AXI4-Stream where the value of one bit index ‘n’ indicates if corresponding byte ‘n’ in the tdata vector is valid of not (‘0’: invalid, ‘1’:valid). As the Event Format 2.1 required full 64-bits valid at each clock cycle, this component handle the tkeep to be always 64-bits valid. In case of bypassing the whole pipeline, tkeep is not handled by this component and is forwarded to the PS Host inferface.
+- The Prophesee Event Stream Smart Tracker (ESST) component is in charge of the back-pressure coming from the output data pipeline (latency from PS or in board application). This component can drop some events in this case and regenerate useful ones (such as time-related events) in case some are missing. Counters and flags are available is such issues occurs in the data pipeline.
+- The Prophesee PS Host Interface is in charge of filling the DMA buffers with events so that they can be processed by the PS. Buffers are passed to the PS when contain the expected number of events when a customizable delay as been reached. signals that are useful to it. Such as tlast controlled either by packet size or timeout occurs if data input has low rate. A special event can also be inserted in the data pipeline if such issue occurs. All of those are configurable via registers.
+- The AXI DMA (AXI Direct Memory Access) from AMD provides high-bandwidth direct memory access between memory and AXI4-Stream-type target peripherals. Its optional scatter gather capabilities also offload data movement tasks from the Central Processing Unit (CPU) in processor based systems. Initialization, status, and management registers are accessed through an AXI4-Lite slave interface.

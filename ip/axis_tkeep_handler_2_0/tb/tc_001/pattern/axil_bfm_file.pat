@@ -1,0 +1,18 @@
+# __regmap_hash__ = da316ec0da41dd46ef11ae799113c5d7f8ff12cf64751c178d9ec076e3c61d56
+C Checking registers content
+R 00000010 00020000 0 0 FFFFFFFF
+C Checking registers default values
+R 00000000 00000000 0 0 00000007
+R 00000004 00000000 0 0 00000007
+C Setting registers values
+W 00000004 00000007
+C Read back registers values
+R 00000004 00000005 0 0 00000007
+C Reset the IP
+W 00000000 00000002
+C Read back registers values
+R 00000004 00000000 0 0 00000007
+W 00000000 00000001
+W 00000004 00000001
+S
+E
