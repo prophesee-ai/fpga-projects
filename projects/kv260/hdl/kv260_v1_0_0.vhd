@@ -16,7 +16,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity kv260_top is
+entity kv260_v1_0_0 is
   port (
     ccam5_csi_rx_clk_n : in STD_LOGIC;
     ccam5_csi_rx_clk_p : in STD_LOGIC;
@@ -27,9 +27,9 @@ entity kv260_top is
     fan_en_b : out STD_LOGIC_VECTOR ( 0 to 0 );
     gpio_generic_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-end kv260_top;
+end kv260_v1_0_0;
 
-architecture STRUCTURE of kv260_top is
+architecture STRUCTURE of kv260_v1_0_0 is
   component kv260 is
   port (
     fan_en_b : out STD_LOGIC_VECTOR ( 0 to 0 );

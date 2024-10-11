@@ -1,6 +1,6 @@
 # Prophesee KV260 Project Changelog
 
-## 1.0.0 - (2024-10-01)
+## 1.0.0 - (2024-10-11)
 
 ### Added
 

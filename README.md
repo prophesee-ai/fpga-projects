@@ -4,8 +4,6 @@
 
 This repository contains the source files and scripts necessary to build Prophesee FPGA projects.
 
-For additional information or support, check our [Knowledge Center](https://support.prophesee.ai/).
-
 ## Requirements
 
 The projects in this repository have been tested and validated on the following setup:
@@ -15,7 +13,7 @@ The projects in this repository have been tested and validated on the following 
 
 Before running any Tcl script provided in this repository or before launching Vivado GUI you need to source the shell script located in the install directory of Vivado:
 
-	source settings64.sh
+    source Vivado/2022.2/settings64.sh
 
 ## Content
 
@@ -25,9 +23,11 @@ The **projects** directory contains complete FPGA projects for AMD Vivado. Proje
 
     ./projects/kv260/scripts/kv260.tcl
 
-The Vivado project will be generated in the **build/projects** directory.
+The Vivado project will be generated in the **build/projects** directory. It can be opened with Vivado GUI in order to run the synthesis, the implementation and to generate the bitstream:
 
-Refer to the **README.md** file in the **projects/project_name** directory for details about a FPGA project.
+    vivado build/projects/kv260/kv260.xpr
+
+Refer to the **README.md** file in the **projects/project_name** directory for details about a particular FPGA project.
 
 ### Prophesee Event Processing IPs
 
@@ -40,3 +40,7 @@ The Vivado project will be generated in the **build/ip** directory.
 Adding the `--run` option to the tcl script, all testcases simulations are run during the project build:
 
     ./scripts/create_ip_sim_project.tcl -tclargs --project_name ip_name_X_Y --run
+
+## Support
+
+For additional information or support, check our [Knowledge Center](https://support.prophesee.ai/).
