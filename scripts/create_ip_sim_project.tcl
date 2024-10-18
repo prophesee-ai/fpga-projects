@@ -263,6 +263,7 @@ foreach testcase $sim_tc {
   set waveform [glob -nocomplain -directory "$testcase/wave" -type f "*.wcfg"]
   add_files -quiet -fileset $fileset -norecurse [file normalize $waveform]
 
+  # Set properties
   set_property -name "top" -value "${ip_name}_tb" -objects $obj
   set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
   set_property -name "xsim.simulate.log_all_signals" -value "1" -objects $obj

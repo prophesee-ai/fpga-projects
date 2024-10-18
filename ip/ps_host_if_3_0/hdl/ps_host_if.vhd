@@ -240,6 +240,8 @@ architecture rtl of ps_host_if is
   signal cfg_timeout_event_msb_value_s : std_logic_vector(31 downto 0);
   signal cfg_timeout_event_lsb_value_s : std_logic_vector(31 downto 0);
 
+  signal insert_tdata_s                : std_logic_vector(AXIS_TDATA_WIDTH_G-1 downto 0);
+
 begin
 
   -------------------------------------
@@ -247,6 +249,10 @@ begin
   -------------------------------------
 
   rstn_s <= aresetn and not cfg_control_global_reset_s(0);
+
+  -- This needs to be modified in case AXIS_TDATA_WIDTH_G is different from AXIL_DATA_WIDTH_G*2
+  assert (AXIS_TDATA_WIDTH_G = AXIL_DATA_WIDTH_G*2) report "ps_host_if currently only support AXIS_TDATA_WIDTH_G = AXIL_DATA_WIDTH_G*2" severity error;
+  insert_tdata_s <= cfg_timeout_event_msb_value_s & cfg_timeout_event_lsb_value_s;
 
   -----------------------------------------
   -- Component Instantiation and Mapping --
@@ -358,7 +364,7 @@ begin
     timeout_o          => tlast_timeout_s,
 
     -- Insert Data
-    insert_tdata_i     => cfg_timeout_event_msb_value_s & cfg_timeout_event_lsb_value_s,
+    insert_tdata_i     => insert_tdata_s,
     insert_tkeep_i     => (others => '1'),
     insert_tuser_i     => (others => '0'),
     insert_tlast_i     => '1',

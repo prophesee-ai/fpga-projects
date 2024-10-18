@@ -21,12 +21,12 @@ use work.ccam_utils.all;
 
 package ccam_evt_types is
 
-  constant EVT_FORMAT                             : integer := 2;
+  constant EVT_FORMAT                             : integer := 0;
 
   constant IMAGE_MAX_WIDTH                        : integer := 2048;        -- event support max image width 2**11
   constant IMAGE_MAX_HEIGHT                       : integer := 2048;        -- event support max image height 2**11
 
-  constant CCAM_EVT_DATA_BITS                     : integer := 32;
+  constant CCAM_EVT_DATA_BITS                     : integer := 64;
   constant CCAM_EVT_DISP_BITS                     : integer := iff(EVT_FORMAT = 1, 10, 12);
   constant CCAM_EVT_Y_BITS                        : integer := iff(EVT_FORMAT = 1,  8, 11);
   constant CCAM_EVT_X_BITS                        : integer := iff(EVT_FORMAT = 1,  9, 11);
@@ -215,19 +215,10 @@ package ccam_evt_types is
   constant MASTER_START_OF_FRAME                  : ccam_evt_subtype_t := x"0018"; -- Marks the start of a Frame in MIPI transmissions.
   constant MASTER_END_OF_FRAME                    : ccam_evt_subtype_t := x"0019"; -- Marks the end of a Frame in MIPI transmissions.
   constant MASTER_MIPI_PADDING                    : ccam_evt_subtype_t := x"001A"; -- Master MIPI TX Padding Data
-  constant MASTER_ERC_DF_TD_VECTOR_DROP_COUNT     : ccam_evt_subtype_t := x"001A";
-  constant MASTER_ERC_DF_NON_TD_VECTOR_DROP_COUNT : ccam_evt_subtype_t := x"001B";
-  constant MASTER_ERC_ALL_DROP_TD_EVENT_COUNT     : ccam_evt_subtype_t := x"001C";
-  constant MASTER_ERC_HDROP_TD_EVENT_COUNT        : ccam_evt_subtype_t := x"001D";
-  constant MASTER_ERC_VDROP_TD_EVENT_COUNT        : ccam_evt_subtype_t := x"001E";
-  constant MASTER_ERC_TDROP_TD_EVENT_COUNT        : ccam_evt_subtype_t := x"001F";
-  constant MASTER_ENTER_LOW_POWER                 : ccam_evt_subtype_t := x"0020";
-  constant MASTER_ENTER_DEEP_LOW_POWER            : ccam_evt_subtype_t := x"0021";
-  constant MASTER_EXIT_LOW_POWER                  : ccam_evt_subtype_t := x"0022";
   constant MASTER_GPAFK_PERIOD                    : ccam_evt_subtype_t := x"0044"; -- Master GPAFK Period Stats
   constant MASTER_GPAFK_TIMESPAN                  : ccam_evt_subtype_t := x"0045"; -- Master GPAFK Timespan Stats
   constant MASTER_GPAFK_IN_TD_EVT_COUNT           : ccam_evt_subtype_t := x"0046"; -- Master GPAFK Input TD Event Count Stats
-  constant MASTER_GPAFK_FILTERED_TD_EVT_COUNT     : ccam_evt_subtype_t := x"0047"; -- Master GPAFK Filtered TD Event Count Stats
+  constant MASTER_GPAFK_OUT_TD_EVT_COUNT          : ccam_evt_subtype_t := x"0047"; -- Master GPAFK Output TD Event Count Stats
   constant MASTER_SYSTEM_TB_END_OF_TASK           : ccam_evt_subtype_t := x"00FD"; -- Marks the end of a Test Task
   constant MASTER_USB_PACKET_INFO                 : ccam_evt_subtype_t := x"00FE"; -- Software Generated Event with USB Packet Info (Arrival Time, Size, etc.)    Software implemented.
   constant MASTER_DUMMY_EVENT                     : ccam_evt_subtype_t := x"00FF"; -- General Purpose Dummy Event.    To be implemented in Moorea

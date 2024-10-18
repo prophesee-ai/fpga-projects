@@ -9,7 +9,9 @@ This repository contains the source files and scripts necessary to build Prophes
 The projects in this repository have been tested and validated on the following setup:
 
 - Ubuntu 20.04.6 LTS
-- AMD Vivado 2022.2 (64-bit) with installed support for Zynq US+ Devices
+- AMD Vivado 2022.2 (64-bit) with installed support for Kria SOMs and Starter Kits and Zynq UltraScale+ MPSoC Production Devices:
+
+![Vivado Install Extra Content Window](doc/img/vivado-install-extra-content.png "Vivado Install Extra Content Window")
 
 Before running any Tcl script provided in this repository or before launching Vivado GUI you need to source the shell script located in the install directory of Vivado:
 
@@ -23,9 +25,15 @@ The **projects** directory contains complete FPGA projects for AMD Vivado. Proje
 
     ./projects/kv260/scripts/kv260.tcl
 
+or using the shortcut in the **scripts** directory:
+
+    ./scripts/create_project.tcl -tclargs kv260
+
 The Vivado project will be generated in the **build/projects** directory. It can be opened with Vivado GUI in order to run the synthesis, the implementation and to generate the bitstream:
 
     vivado build/projects/kv260/kv260.xpr
+
+The project includes a testcase that can be simulated with Vivado.
 
 Refer to the **README.md** file in the **projects/project_name** directory for details about a particular FPGA project.
 
@@ -33,13 +41,13 @@ Refer to the **README.md** file in the **projects/project_name** directory for d
 
 The IP directory contains Prophesee Event Processing IPs used in the FPGA projects. These IPs can be simulated independently from a FPGA project. For that you can use the script `create_ip_sim_project.tcl` available in the **scripts** directory:
 
-    ./scripts/create_ip_sim_project.tcl -tclargs --project_name ip_name_X_Y
+    ./scripts/create_ip_sim_project.tcl -tclargs --project_name <ip_name_X_Y>
 
 The Vivado project will be generated in the **build/ip** directory.
 
 Adding the `--run` option to the tcl script, all testcases simulations are run during the project build:
 
-    ./scripts/create_ip_sim_project.tcl -tclargs --project_name ip_name_X_Y --run
+    ./scripts/create_ip_sim_project.tcl -tclargs --project_name <ip_name_X_Y> --run
 
 ## Support
 
