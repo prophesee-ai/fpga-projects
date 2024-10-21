@@ -376,7 +376,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf01f543</spirit:value>
+            <spirit:value>af5b4315</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -392,7 +392,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf01f543</spirit:value>
+            <spirit:value>af5b4315</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1133,7 +1133,7 @@
       <spirit:file>
         <spirit:name>hdl/event_stream_smart_tracker.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3b9c70d7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_50f7c3aa</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1371,18 +1371,18 @@
       </xilinx:xpmLibraries>
       <xilinx:vendorDisplayName>Prophesee</xilinx:vendorDisplayName>
       <xilinx:vendorURL>https://www.prophesee.ai</xilinx:vendorURL>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>user.org:user:event_stream_smart_tracker:2.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>prophesee.ai:prophesee:event_stream_smart_tracker:2.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2024-07-26T14:34:43Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-10-21T14:40:46Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2022.2.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="228bd88e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="88657cf9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e0fb0414"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="61003d1a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0de9d5c3"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="30f84bde"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="ff26da3c"/>

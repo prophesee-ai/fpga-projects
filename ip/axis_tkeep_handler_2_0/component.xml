@@ -381,7 +381,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b7de62dd</spirit:value>
+            <spirit:value>1fa0328d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -397,7 +397,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b7de62dd</spirit:value>
+            <spirit:value>1fa0328d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -433,7 +433,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>eda9d82d</spirit:value>
+            <spirit:value>4f0e9cee</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -447,7 +447,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>eda9d82d</spirit:value>
+            <spirit:value>4f0e9cee</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1054,7 +1054,7 @@
       <spirit:file>
         <spirit:name>hdl/axis_tkeep_handler.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_6f6c6f0b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_d91a1496</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1156,16 +1156,16 @@
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>prophesee.ai:prophesee:axis_tkeep_handler:1.1</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2024-03-25T16:12:55Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-10-21T14:40:11Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="45c5e367"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="257ed261"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a755a840"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="863ddfe9"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4c1f6b51"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fa1e7650"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5b5fdaa6"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6494a433"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

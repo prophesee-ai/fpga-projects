@@ -303,7 +303,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.ARESETN.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -386,7 +386,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b64ba042</spirit:value>
+            <spirit:value>110289e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -401,7 +401,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b64ba042</spirit:value>
+            <spirit:value>110289e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1020,11 +1020,6 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
-      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
-      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_75e45d2a</spirit:name>
       <spirit:enumeration>16</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
@@ -1035,6 +1030,11 @@
       <spirit:name>choice_list_99ba8646</spirit:name>
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>64</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
@@ -1059,7 +1059,7 @@
       <spirit:file>
         <spirit:name>hdl/ps_host_if.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_226b2dfc</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c061ebac</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1197,16 +1197,16 @@
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>prophesee.ai:prophesee:ps_host_if:2.1</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2024-03-27T15:28:21Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-10-21T14:41:55Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c0d74a2c"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="45c5e367"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="5fbef513"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4103a299"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="fdf5f9dc"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="65d6f20a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9390d071"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fa1e7650"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8db0d359"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="cdc377ae"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
