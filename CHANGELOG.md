@@ -1,12 +1,14 @@
 # Prophesee KV260 Project Changelog
 
-## 1.0.0 - (2024-10-21)
+## 1.0.0 - (2024-11-08)
 
 ### Added
 
 * Script to generate IP simulation projects
 
 ### Changed
+
+* PL clock frequency set to 125MHz
 
 * New IPs for kv260 project:
     - axis_tkeep_handler v2.0
